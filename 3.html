@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .custom-title {
+        margin-left:300px;/* 距离左边 500px */
+        font-size: 25px; /* 字体放大 */
+        font-weight: bold;  /* 加粗字体 */
+        margin-top:40px;}
+        .custom-title1 {
+        margin-left:210px;/* 距离左边 500px */
+        font-size: 25px; /* 字体放大 */
+        font-weight: bold;  /* 加粗字体 */
+        margin-top:40px;}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .custom-title2{
+            margin-left:300px;/* 距离左边 500px */
+            font-size: 25px; /* 字体放大 */
+            font-weight: bold;  /* 加粗字体 */
+            margin-top:40px;
+
+        }
+                .custom-title3{
+            margin-left:110px;/* 距离左边 500px */
+            font-size: 25px; /* 字体放大 */
+            font-weight: bold;  /* 加粗字体 */
+            margin-top:40px;
+
+        }
+        .carousel-container1 {
+            width: 800px;
+            height: 80vh;
+            overflow: hidden;
+            position: relative;
+            background: transparent;
+        }
+
+        .carousel-track1 {
+            display: flex;
+            height: 100%;
+            animation: scroll 15s linear infinite;
+
+        }
+
+        .carousel-item1 {
+            flex: 0 0 auto;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px;
+
+        }
+
+        .carousel-item1 img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            transform: scale(0.7);
+        }
+
+        .gao{
+            height: 200px;
+        }
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-58% * 6)); /* 6张图片 */
+            }
+        }
+
+        /* 暂停动画当鼠标悬停 */
+        .carousel-container1:hover .carousel-track1 {
+            animation-play-state: paused;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+            background-attachment: fixed; /* 使背景固定，不随滚动移动 */
+            background-size: cover;
+        }
+</style>
+<head>
+    <title>梁经伟的个人网站</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/vendor.css">
+
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/Swiper/9.4.1/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Nunito+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="js/modernizr.js"></script>
+
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navigation-bar" tabindex="0" >
+
+
+    <div class=" offcanvas-btn text-end m-3">
+        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"><iconify-icon icon="ci:hamburger-lg"
+                style="font-size: 30px;"></iconify-icon></button>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <section id="navigation-bar" class="navigation position-fixed ">
+
+
+                <ul class="nav nav-pills text-center align-items-center mt-5 ms-xl-5 ms-3 ">
+                    <li>
+                        <a href="index.html" class="nav-link active rounded-0" aria-current="page" data-bs-toggle="tooltip"
+                            data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
+                            <iconify-icon icon="ic:round-home"></iconify-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a   href="index.html" class="nav-link rounded-0" data-bs-toggle="tooltip" data-bs-placement="right"
+                            aria-label="Dashboard" data-bs-original-title="Dashboard">
+                            <iconify-icon icon="ic:round-person"></iconify-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="nav-link rounded-0" data-bs-toggle="tooltip" data-bs-placement="right"
+                            aria-label="Orders" data-bs-original-title="Orders">
+                            <iconify-icon icon="ic:round-school"></iconify-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="nav-link rounded-0" data-bs-toggle="tooltip"
+                            data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
+                            <iconify-icon icon="ic:round-business-center"></iconify-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="nav-link rounded-0" data-bs-toggle="tooltip" data-bs-placement="right"
+                            aria-label="Customers" data-bs-original-title="Customers">
+                            <iconify-icon icon="ic:round-menu-book"></iconify-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="nav-link rounded-0" data-bs-toggle="tooltip" data-bs-placement="right"
+                            aria-label="Customers" data-bs-original-title="Customers">
+                            <iconify-icon icon="ic:round-phone"></iconify-icon>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <div class="col-xl-6 offset-xl-2">
+
+                    <div class="custom-title">自主巡航</div>
+                    <img src="images/3.jpg" alt="图片3" width="80%" height="auto">
+                    <p>第二十五届中国机器人及人工智能大赛全国总决赛三等奖</p>
+                    <img src="images/4.jpg" alt="图片4" width="80%" height="auto">
+                    <p>第二十五届中国机器人及人工智能大赛江西赛区二等奖</p>
+                    <img src="images/5.jpg" alt="图片5" width="80%" height="auto">
+                    <p>第四届国际青年人工智能大赛——三等奖</p>
+
+
+            </div>
+
+            <div class="hero-sidebar col-xl-3 offset-xl-1">
+                <header class="hero position-fixed">
+                    <div class="container hero-container text-center my-4 pt-3 align-content-between">
+
+                        <div>
+                            <img src="images/carlbrown.png" class="hero-img mb-4 rounded-circle" alt="Bootstrap Themes"
+                                width="140" height="140" loading="lazy">
+                            <h2 class="fw-bold mt-3">梁经伟</h2>
+                            <p>本科毕业于南昌航空大学航空制造工程学院智能制造系</p>
+                            <div class="social-icon my-3">
+
+                            </div>
+
+                            <h4 class=" text-uppercase text-light fs-5 fw-bold py-2 mx-5 mt-5">工程经验</h4>
+
+                            <ul class="text-center list-unstyled">
+
+                                <li><a href="1.html" class="text-uppercase ">同济大学网页设计<span
+                                            class="badge bg-secondary"></span></a></li>
+                                <li><a href="2.html" class="text-uppercase ">核酸检测辅助机器人<span
+                                            class="badge bg-secondary"></span></a></li>
+                                <li><a  href="3.html" class="text-uppercase ">自主巡航<span
+                                            class="badge bg-secondary"></span></a></li>
+                                <li><a  href="4.html" class="text-uppercase ">安全排插发明专利<span
+                                            class="badge bg-secondary"></span></a></li>
+
+
+
+                            </ul>
+                        </div>
+
+
+
+                    </div>
+                </header>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+
+
+</body>
+
+</html>
